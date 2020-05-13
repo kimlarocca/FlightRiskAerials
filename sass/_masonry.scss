@@ -1,0 +1,165 @@
+#fit-width .masonry {
+	margin: 0 auto
+}
+.masonry {
+	margin: 15px auto;
+	margin-top: 800px;
+	clear: both;
+	width: 100%;
+}
+.item-content p, .masonry .item, .overlayB2T p {
+	margin-bottom: 10px
+}
+.masonry .solid:hover {
+	opacity: .75
+}
+.masonry .item {
+	width: 200px;
+	height: 200px;
+	float: left
+}
+.item.h2, .item.video {
+	height: 410px
+}
+.tint {
+	background: #fff
+}
+.tint:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,255,.2);
+	transition: all .3s linear
+}
+.tint:hover:before {
+	background: 0 0
+}
+.item.w2 {
+	width: 410px
+}
+.item.video {
+	width: 620px
+}
+.item.white {
+	background: #fff
+}
+.item.black {
+	background: #000
+}
+.item.ltblue {
+	background: $secondary-color
+}
+.item.gray {
+	background: $gray
+}
+.item.blue {
+	background: rgba(0,0,255,.5)
+}
+.item.green {
+	background: $tertiary-color
+}
+.item.red {
+	background: #cc0000;
+	color: #fff;
+}
+.item-content {
+	padding: 20px;
+	text-align: center
+}
+.item.logo {
+	position: relative;
+	background-image: url(../images/logo-new.jpg);
+	background-repeat: no-repeat
+}
+.bottom-image, .item-title {
+	position: absolute;
+	opacity: .8
+}
+.item-title {
+	width: 100%;
+	height: 40px;
+	background-color: #fff;
+	z-index: 2;
+	bottom: 0;
+	text-align: center;
+	line-height: 40px
+}
+.bottom-image {
+	bottom: 40px;
+	right: -21px;
+	margin-right: 50%;
+	width: 42px;
+	height: 20px
+}
+
+.masonry, .videoHolder, iframe, video {
+	max-width: 100%
+}
+@media screen and (max-width :1055px) {
+.item.video {
+	width: 410px;
+	height: 200px
+}
+}
+
+@media screen and (max-width:$breakpoint) {
+.masonry {
+	margin-top: 250px;
+}
+.item.h2, .item.info, .item.info2, .item.video, .item.w2, .item.w3, .masonry .item {
+	margin-left: 0;
+	margin-right: 0
+}
+.masonry .item {
+	width: 145px;
+	height: 145px
+}
+.item.info {
+	width: 300px;
+	height: auto;
+}
+.item.social, .item.social img {
+	width: 145px;
+	height: 145px
+}
+.item.logo, .item.video, .item.w2, .item.w3 {
+	width: 300px
+}
+.item.social {
+	text-align: center
+}
+.item.h2 {
+	height: 300px
+}
+.item.info2 {
+	height: 600px
+}
+.item.video {
+	height: 169px
+}
+.item.logo {
+	height: 175px;
+	background-image: url(../images/logo-300-175.jpg)
+}
+.column50 {
+	width: 100%
+}
+#embed, .videoHolder {
+	width: 300px
+}
+#embed {
+	height: 169px;
+	margin: auto auto 20px
+}
+.hideOnMobile {
+	display: none
+}
+.vine-embed {
+	width: 145px;
+	height: 145px
+}
+}

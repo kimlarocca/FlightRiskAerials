@@ -1,0 +1,162 @@
+//slide out menu
+#slide-menu, .sidr {
+	position: absolute;
+	top: 0
+}
+.header, .sidr {
+	position: fixed
+}
+#slide-menu {
+	border-bottom: none!important;
+	left: 18px;
+	width: 50px;
+	height: 50px
+}
+*, .sidr ul {
+	padding: 0;
+	margin: 0
+}
+*, .sidr ul, body {
+	margin: 0
+}
+.sidr {
+	display: none;
+	height: 100%;
+	z-index: 999999;
+	width: 260px;
+	overflow-x: none;
+	overflow-y: auto;
+	font-size: 18px;
+	font-weight: 700;
+	background-color: rgba(61, 67, 81, 1);
+	color: #fff;
+	-webkit-transition: .2s all linear;
+	-moz-transition: .2s all linear;
+	-o-transition: .2s all linear;
+	transition: .2s all linear;
+}
+.sidr ul, .sidr ul li {
+	display: block
+}
+.sidr ul li {
+	background-color: rgba(61, 67, 81, 1);
+	margin: 0;
+	font-weight: 400;
+	line-height: 38px;
+	-webkit-transition: .2s all linear;
+	-moz-transition: .2s all linear;
+	-o-transition: .2s all linear;
+	transition: .2s all linear;
+}
+.sidr ul li:hover {
+	opacity: .8;
+	background-color: rgba(85, 89, 99, 1);
+}
+.sidr .categoryEnd {
+	border-bottom: solid thin #fff;
+	border-width: 95%;
+	margin: 12px 0;
+	height: 1px
+}
+.header nav a, .sidr ul li ul, .sidr ul li ul li:last-child {
+	border-bottom: none
+}
+.sidr ul li ul, h3 {
+	margin: 0
+}
+.sidr .biggerText {
+	font-size: 22px
+}
+.sidr ul li a, .sidr ul li span {
+	padding: 0 15px;
+	border-bottom: none;
+	display: block;
+	text-decoration: none;
+	color: #fff
+}
+.sidr ul li ul li {
+	line-height: 38px;
+	font-size: 13px
+}
+.sidr ul li ul li.active, .sidr ul li ul li.sidr-class-active, .sidr ul li ul li:hover {
+	border-top: none;
+	line-height: 38px
+}
+.sidr ul li ul li.active>a, .sidr ul li ul li.active>span, .sidr ul li ul li.sidr-class-active>a, .sidr ul li ul li.sidr-class-active>span, .sidr ul li ul li:hover>a, .sidr ul li ul li:hover>span {
+	-webkit-box-shadow: inset 0 0 10px 3px #ebebeb;
+	-moz-box-shadow: inset 0 0 10px 3px #ebebeb;
+	box-shadow: inset 0 0 10px 3px #ebebeb
+}
+.sidr ul li ul li a, .sidr ul li ul li span {
+	color: rgba(51,51,51,.8);
+	padding-left: 30px
+}
+@media all and (max-width:600px) {
+#slide-menu {
+	left: 0;
+}
+}
+
+//header bar
+.header, .header nav a.active {
+	color: $font-color;
+}
+.header {
+	width: 100%;
+	height: 50px;
+	background-color: $white;
+	font-size: 30px;
+	z-index: 5000;
+	
+	font-family: $font-family2
+}
+.headerMenu {
+	left: 70px;
+	position: absolute
+}
+.headerLeft {
+	float: left;
+	line-height: 50px;
+	text-align: left;
+	padding-left: 20px
+}
+.headerRight, .headerRightMobile {
+	float: right;
+	right: 20px;
+	line-height: 50px;
+	text-align: right
+}
+.headerRightMobile {
+	display: none;
+	visibility: hidden
+}
+.header nav {
+	display: block
+}
+.header nav ul {
+	display: block;
+	margin: 0 0 0 36px
+}
+.header nav li {
+	display: inline
+}
+.header nav a {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-decoration: none;
+	color: $font-color;
+	margin-right: 16px
+}
+.header nav a:hover {
+	border-bottom: 2px solid $tertiary-color;
+}
+@media all and (max-width:600px) {
+.headerMenu {
+	left: 50px;
+}
+.header nav a {
+	padding-right: 0;
+	margin-right: 10px;
+}
+}

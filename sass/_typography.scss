@@ -1,0 +1,103 @@
+//large page titles
+.h1-large, .h1-large-line2 {
+	font-family: $font-family;
+	font-size: 150px;
+	text-align: right;
+	font-weight: 900;
+	top: 105px;
+	position: absolute;
+	right: 0;
+	//stroke
+	
+   -webkit-text-stroke: 1px $white;
+   color: $black;
+   text-shadow:
+      1px 1px 0 $white,
+     -1px -1px 0 $white,  
+      1px -1px 0 $white,
+      -1px 1px 0 $white,
+       1px 1px 0 $white;
+}
+.h1-large-line2 {
+	clear: both;
+	margin-top: 120px;
+	z-index: 20;
+}
+@media only screen and (max-width: 800px) {
+.h1-large, .h1-large-line2 {
+	font-size: 100px;
+}
+.h1-large-line2 {
+	margin-top: 100px;
+}
+}
+@media only screen and (max-width: $breakpoint) {
+	p { margin: 5px;}
+.h1-large, .h1-large-line2 {
+	font-size: 60px;
+}
+.h1-large {
+	top: 65px;
+}
+.h1-large-line2 {
+	margin-top: 10px;
+}
+}
+
+h1 {
+	font-size: 33px;
+	padding: 20px 0;
+	margin: 0 5px;
+	font-family: $font-family;
+	font-weight: 600;
+}
+//masonry tile H1
+.item h1 { 
+	font-size: 33px;
+	line-height: 33px;
+	margin: 0;
+	padding: 0;
+	font-family: $font-family2;
+}
+h2 {
+	margin: 0 0 5px;
+	text-transform: lowercase;
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: 600;
+	font-family: $font-family2;
+}
+.sRow h2 {
+	padding: 0 0 10px 30px;
+	font-size: 20px;
+	font-family: $font-family
+}
+.blue-bg h2 {
+	padding: 10px;
+	font-size: 30px;
+}
+.sRow p {
+	padding: 0 0 0 30px
+}
+.item-title h2 {
+	margin: 5px;
+}
+h3 {
+	font-family: $font-family;
+	font-size: 16px;
+	padding: 20px 0;
+	margin: 0;
+	font-weight: 600;
+	color: $main-color;
+	text-transform: uppercase;
+}
+h4 {
+	font-family: $font-family;
+	font-size: 36px;
+	line-height: 36px;
+	padding: 20px 0;
+	margin: 0;
+	font-weight: 400;
+	color: $font-color;
+	text-transform: lowercase;
+}

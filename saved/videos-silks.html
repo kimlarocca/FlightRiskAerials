@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flight Risk Aerials | Video Gallery</title>
+<link rel="stylesheet" href="../styles/styles.css" />
+<link rel="import" href="../favicon/favicon.html" />
+</head>
+
+<body>
+<!-- header -->
+<header id="header" class="header" role="banner">
+  <div class="headerLeft">
+    <div class="floatLeft"><a id="slide-menu" href="#sidr"><img src="../images/slider-icon.png" width="50" height="50" border="0" alt="menu"></a></div>
+    <div class="floatLeft headerMenu">menu</div>
+  </div>
+  <div class="headerRight">
+    <nav>
+      <ul>
+        <li><a href="../schedule.html">schedule</a></li>
+        <li><a href="../parties.html">private parties</a></li>
+        <li><a href="../faqs.html">faq</a></li>
+        <li><a href="../reserve.html">register</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="headerRightMobile">
+    <nav>
+      <ul>
+        <li><a href="../reserve.html">register</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- slide out menu -->
+<div id="sidr" style="display:none">
+  <ul>
+    <li class="biggerText"><a href="../index.html">HOME</a></li>
+    <li class="categoryEnd"></li>
+    <li><a href="../schedule.html">Class Schedule</a></li>
+    <li><a href="../reserve.html">Register Online</a></li>
+    <li><a href="../parties.html">Private Parties</a></li>
+    <li><a href="../workshops.html">Workshops & Events</a></li>
+    <li><a href="../studio-rental.html">Studio Rental</a></li>
+    <li><a href="../faqs.html">FAQs</a></li>
+    <li><a href="../reviews.html">Reviews</a></li>
+    <li><a href="../videos.html">Videos</a></li>
+    <li><a href="../photos.html">Photos</a></li>
+    <li><a href="../register.html">Buy Classes</a></li>
+    <li><a href="../register.html">Gift Certificates</a></li>
+    <li><a href="../contact.html">Directions / Contact Us</a></li>
+    <li><a href="http://visitor.constantcontact.com/d.jsp?m=1103105356514&p=oi" target="_blank">Join Our Mailing List</a></li>
+    <li class="categoryEnd"></li>
+    <li class="biggerText"><a href="../pole-dance.html">POLE DANCE</a></li>
+    <li class="biggerText"><a href="../aerial-silks.html">AERIAL SILKS</a></li>
+    <li class="biggerText"><a href="../bellydance.html">BELLYDANCE</a></li>
+    <li class="categoryEnd"></li>
+    <li><a href="https://www.facebook.com/WBMassage" target="_blank">Welcome Back Massage</a></li>
+    <li><a href="https://www.facebook.com/eyelash.extensions.nyc" target="_blank">MesmerEyes</a></li>
+    <li><a href="http://www.thesoulsinspiration.com" target="_blank">The Soul's Inspiration</a></li>
+    <li><a href="http://www.purelieve.com" target="_blank">Purelieve Massage</a></li>
+    <li>&nbsp;</li>
+  </ul>
+</div>
+<div class="main-container">
+  <h1><a href="../index.html" class="green-link">Flight Risk Aerials</a> Video Gallery</h1>
+  
+  <!--<div class="videoHolder center">
+<div id="embed"></div>
+</div>
+<div id="thumbs">
+	<ul></ul>
+</div>
+-->
+  <div id="wrapper">
+    <div id="embed"></div>
+    <div id="thumbs">
+      <ul>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- main-content -->
+<div class="clearfloat10"></div>
+<div class="footer">
+  <div class="clearFloat margin20"><img src="../images/lotus.png" width="150" height="43" alt="Flight Risk Aerials, morristown nj fitness class, morristown nj dance class, morristown nj massage" /></div>
+  <p> <a href="../index.html">Flight Risk Aerials</a> is located in the Randolph Business Campus at 961 Rt 10 E, Randolph NJ. <a href="../contact.html">Click here for directions or to contact us!</a></p>
+</div>
+<link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet" type="text/css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4037303-6', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+<script type="text/javascript" src="../scripts/jquery.sidr.min.js"></script>
+<script type="text/javascript" src="../scripts/scripts.js"></script>
+<script>
+//video gallery
+
+		var apiEndpoint = 'http://vimeo.com/api/v2/';
+		var oEmbedEndpoint = 'http://vimeo.com/api/oembed.json'
+		var oEmbedCallback = 'switchVideo';
+		var videosCallback = 'setupGallery';
+		var vimeoUsername = 'kimh';
+		
+		// Get the user's videos
+		$(document).ready(function() {
+			$.getScript(apiEndpoint + 'album/' + '1498044' + '/videos.json?callback=' + videosCallback);
+		});
+
+
+		function getVideo(url) {
+			$.getScript(oEmbedEndpoint + '?url=' + url + '&width=504&height=280&callback=' + oEmbedCallback);
+		}
+
+		function setupGallery(videos) {
+
+			// Set the user's thumbnail and the page title
+			$('#stats').prepend('<img id="portrait" src="' + videos[0].user_portrait_medium + '" />');
+			$('#stats h2').text(videos[0].user_name + "'s Videos");
+
+			// Load the first video
+			getVideo(videos[0].url);
+
+			// Add the videos to the gallery
+			for (var i = 0; i < videos.length; i++) {
+				var html = '<li><a href="' + videos[i].url + '"><img src="' + videos[i].thumbnail_medium + '" class="thumb" />';
+				html += '<p>' + videos[i].title + '</p></a></li>';
+				$('#thumbs ul').append(html);
+			}
+
+			// Switch to the video when a thumbnail is clicked
+			$('#thumbs a').click(function(event) {
+				event.preventDefault();
+				getVideo(this.href);
+				return false;
+			});
+
+		}
+
+		function switchVideo(video) {
+			$('#embed').html(unescape(video.html));
+		}
+</script>
+</body>
+</html>

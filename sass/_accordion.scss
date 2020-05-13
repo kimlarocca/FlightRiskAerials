@@ -1,0 +1,39 @@
+.RAMexpandContent {
+	max-width: 100%;
+	clear: left;
+	margin-top: 5px;
+	cursor: pointer;//kim
+}
+.RAMexpandedContent {
+	max-width: 100%;
+	clear: left;
+	margin: 0 10px 20px 10px;
+}
+.RAMheaderColumn1 {
+	font-size: 16px;
+	color: #0f7ea2;
+	font-family: "Open Sans", sans-serif;
+	width: auto; text-transform: uppercase;
+	float: left;
+	height: 44px;
+	line-height: 44px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.RAMheaderColumn2 {
+	width: 57px;
+	right: 0;
+	height: 44px;
+	float: right;
+	margin: 0;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+.RAMclearfloat {
+	width: 100%;
+	clear: left;
+	border-bottom-color: #ccc;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-color: #ccc;
+}

@@ -1,0 +1,97 @@
+ErrorDocument 404 /404.html
+
+Redirect 301 /index.asp /index.html
+Redirect 301 /aerial-silks.asp /aerial-silks.html
+Redirect 301 /bellydance.asp /bellydance.html
+Redirect 301 /bollywood.asp /bollywood.html
+Redirect 301 /chair-dance.asp /chair-dance.html
+Redirect 301 /contact.asp /contact.html
+Redirect 301 /faqs.asp /faqs.html
+Redirect 301 /flexibility.asp /flexibility.html
+Redirect 301 /footer.asp /footer.html
+Redirect 301 /gift-certificates.asp /gift-certificates.html
+Redirect 301 /include.asp /include.html
+Redirect 301 /parties-faqs.asp /parties-faqs.html
+Redirect 301 /parties.asp /parties.html
+Redirect 301 /payments.asp /payments.html
+Redirect 301 /photos.asp /photos.html
+Redirect 301 /pole-dance.asp /pole-dance.html
+Redirect 301 /register.asp /https://my.slateit.com/student-login.php?studioID=1
+Redirect 301 /room.asp /room.html
+Redirect 301 /room2.asp /room2.html
+Redirect 301 /schedule.asp /schedule.html
+Redirect 301 /thankyou.asp /thankyou.html
+Redirect 301 /videos.asp /videos.html
+Redirect 301 /workshops.asp /workshops.html
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^wellnessonthegreen.com [NC]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ http://www.wellnessonthegreen.com/$1 [L,R=301,NC]
+
+AddType 'text/html; charset=UTF-8' html
+
+# BEGIN Compress text files
+<ifModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/xml text/css text/plain
+  AddOutputFilterByType DEFLATE image/svg+xml application/xhtml+xml application/xml
+  AddOutputFilterByType DEFLATE application/rdf+xml application/rss+xml application/atom+xml
+  AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-otf
+  AddOutputFilterByType DEFLATE font/truetype font/opentype
+  AddOutputFilterByType DEFLATE application/font-woff2
+  AddType application/font-woff2 .woff2
+</ifModule>
+# END Compress text files
+ 
+# BEGIN Expire headers
+<ifModule mod_expires.c>
+  ExpiresActive On
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 2 month"
+ExpiresByType application/pdf "access plus 2 month"
+ExpiresByType application/x-javascript "access plus 2 month"
+ExpiresByType text/javascript "access plus 2 month"
+ExpiresByType application/javascript "access plus 2 month"
+ExpiresByType application/x-shockwave-flash "access plus 2 month"
+ExpiresByType image/x-icon "access plus 1 year"	
+ExpiresByType application/font-woff2 "access plus 1 year"
+ExpiresByType application/font-woff "access plus 1 year"
+ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+ExpiresByType application/x-font-ttf "access plus 1 year"
+ExpiresByType font/opentype "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType application/x-font-woff "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+ExpiresByType video/mp4 "access plus 2 month"
+ExpiresByType video/ogg "access plus 2 month"
+ExpiresByType video/webm "access plus 2 month"
+ExpiresDefault "access plus 2 days"
+</ifModule>
+# END Expire headers
+ 
+# BEGIN Cache-Control Headers
+<ifModule mod_headers.c>
+  <filesMatch ".(ico|jpe?g|png|gif|swf)$">
+    Header set Cache-Control "public"
+  </filesMatch>
+  <filesMatch ".(css)$">
+    Header set Cache-Control "public"
+  </filesMatch>
+  <filesMatch ".(js)$">
+    Header set Cache-Control "private"
+  </filesMatch>
+  <filesMatch ".(x?html?|php)$">
+    Header set Cache-Control "private, must-revalidate"
+  </filesMatch>
+</ifModule>
+# END Cache-Control Headers
+ 
+# BEGIN Turn ETags Off
+FileETag None
+# END Turn ETags Off

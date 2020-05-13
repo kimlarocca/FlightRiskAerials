@@ -1,0 +1,44 @@
+.button, .button2, .button3 {
+	text-transform: uppercase;
+	text-align: center;
+	margin: auto;
+	width: 120px;
+	padding: 10px;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-ms-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s
+}
+.button:hover, .button2:hover {
+	opacity: .75;
+	cursor: pointer
+}
+.button3:hover {
+	background-color: $font-color;
+	color: $white!important;
+	cursor: pointer
+}
+@media all and (max-width:$breakpoint) {
+.button, .button2, .button3 {
+	width: auto;
+	padding: 10px 5px;
+	font-size: 12px;
+}
+}
+.button {
+	border: 2px solid #fff;
+	color: #fff
+}
+.button2 {
+	color: $main-color!important;
+	border-bottom: none!important;
+	font-weight: 700
+}
+.button3 {
+	color: $font-color!important;
+	border: solid 2px $font-color!important;
+	border-bottom: solid 2px $font-color!important;
+	font-weight: 400;
+	font-size: 12px;
+}
